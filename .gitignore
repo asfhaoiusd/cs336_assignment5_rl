@@ -3,6 +3,19 @@
 venv/
 env/
 
+# 本地训练出的模型目录（权重保留在本地，不上传 GitHub）
+pretrain_model/
+rl_model/
+
+# MATH 数据集（jsonl 保留在本地）
+chapter5/MATH/*.jsonl
+
+# 评测输出
+results.jsonl
+
+# 本地 setuptools/uv 安装产生的元数据
+cs336_hw.egg-info/
+
 # 大型数据文件
 *.txt
 !README.txt

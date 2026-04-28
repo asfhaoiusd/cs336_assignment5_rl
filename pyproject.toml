@@ -1,3 +1,11 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+# 第 5 章 CUDA：可选依赖 chapter5-cuda（vLLM 会拉取 torch+cu128 等）。
+# 安装：python -m venv .venv && .venv/bin/pip install -U pip && .venv/bin/pip install -e ".[chapter5-cuda]"
+# `chapter5/cs336_alignment/` 内为课程 drgrpo 评分模块的本地副本（与官方 assignment5-alignment 一致）。
+
 [project]
 name = "cs336-hw"
 version = "0.1.0"
@@ -7,6 +15,21 @@ requires-python = ">=3.12"
 dependencies = [
     "requests>=2.32.3",
 ]
+
+[project.optional-dependencies]
+chapter5-cuda = [
+    "vllm>=0.18.0,<0.20",
+    "accelerate>=1.0.0",
+    "huggingface-hub>=0.24.0",
+    "safetensors>=0.4.0",
+    "sentencepiece>=0.2.0",
+    "math-verify[antlr4-13-2]>=0.7.0",
+    "pylatexenc==2.10",
+    "latex2sympy2_extended>=1.0",
+]
+
+[tool.setuptools]
+py-modules = ["main"]
 
 [[tool.uv.index]]
 url = "https://pypi.tuna.tsinghua.edu.cn/simple"

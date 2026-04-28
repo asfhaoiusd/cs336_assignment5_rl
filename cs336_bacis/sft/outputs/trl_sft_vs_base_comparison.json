@@ -1,0 +1,22 @@
+{
+  "eval_dataset": "/root/autodl-fs/assignment5-rl/chapter5/MATH/validation.jsonl",
+  "max_eval_examples": 128,
+  "base_model": "/root/autodl-fs/assignment5-rl/chapter5/models/Qwen2.5-Math-1.5B",
+  "sft_model": "/root/autodl-fs/assignment5-rl/pretrain_model/checkpoint-247",
+  "base_metrics": {
+    "num_eval_examples": 128,
+    "masked_ce_loss": 2.9914072644896805,
+    "perplexity": 19.913684844970703
+  },
+  "sft_metrics": {
+    "num_eval_examples": 128,
+    "masked_ce_loss": 0.8546387147107453,
+    "perplexity": 2.35052490234375
+  },
+  "improvement": {
+    "loss_drop_abs": 2.1367685497789353,
+    "loss_drop_pct": 71.43021196558662,
+    "ppl_drop_abs": 17.563159942626953,
+    "ppl_drop_pct": 88.19643415750156
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "evaluation_type": "quick",
+  "note": "Quick comparison on a small subset; use full evaluation for final conclusions.",
+  "eval_dataset": "/root/autodl-fs/assignment5-rl/chapter5/MATH/validation.jsonl",
+  "max_eval_examples": 32,
+  "base_model": "/root/autodl-fs/assignment5-rl/chapter5/models/Qwen2.5-Math-1.5B",
+  "sft_model": "/root/autodl-fs/assignment5-rl/pretrain_model/checkpoint-247",
+  "base_metrics": {
+    "num_eval_examples": 32,
+    "masked_ce_loss": 2.9608690049499273,
+    "perplexity": 19.31475067138672
+  },
+  "sft_metrics": {
+    "num_eval_examples": 32,
+    "masked_ce_loss": 0.8773356823367067,
+    "perplexity": 2.404484748840332
+  },
+  "improvement": {
+    "loss_drop_abs": 2.0835333226132207,
+    "loss_drop_pct": 70.36898015852803,
+    "ppl_drop_abs": 16.910265922546387,
+    "ppl_drop_pct": 87.55104433006021
+  }
+}
